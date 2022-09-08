@@ -7,9 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>JS Practice<h2>
+    <h2>JS Practice<h2></h2>
+    <h3>JS Iterator and generator<h3>
     <script>
-        console.log('Hello')
+        // console.log('Hello')
+        function *generatorStart(){
+            let nextNum = 300;
+            while(true){
+                yield(nextNum++);
+            }
+        }
+
+        let g = generatorStart();
+        for(value of g){
+            if(value > 310) break;
+            console.log(value)
+        }
     </script>
 </body>
 </html>
