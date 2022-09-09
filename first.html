@@ -12,25 +12,34 @@
     <script>
         //Here iterator
 
-        // var arr = ['Apple', 'Banana', 'Guava', 'Grapes'];
-        var arr = "Qutbuddin Khan";
-
+        var arr = ['Apple', 'Banana', 'Guava', 'Grapes'];
+        // var arr = "Qutbuddin Khan";
         //console.log(typeof arr[Symbol.iterator]) //function
-
-
         var y = arr[Symbol.iterator]();
         var result = y.next();
-        // console.log(y)
-        // y.next();
-        // console.log(y.next());
-        // console.log(y.next());
-        // console.log(y.next().value);
-        // console.log(y.next().done);
-
         while(!result.done){
-            console.log(result.value);
+            // console.log(result.value);
             result = y.next();
         }
+
+        var b = ["Saab", "Volvo", "BMW" , 5, 45, "Khan"];
+
+        const numberIterartor = (arr) => {
+            var nextVal = 0;
+            return {
+                nextValue(){
+                    return {value:arr[nextVal], done: false}
+                }
+            }
+        }
+
+        var res = numberIterartor(b);
+        console.log(res.nextValue());
+        console.log(res.nextValue());
+        console.log(res.nextValue());
+        console.log(res.nextValue());
+        console.log(res.nextValue());
+        console.log(res.nextValue());
 
         // console.log('Hello')
         // function *generatorStart(){
