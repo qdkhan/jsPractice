@@ -10,19 +10,41 @@
     <h2>JS Practice<h2></h2>
     <h3>JS Iterator and generator<h3>
     <script>
-        // console.log('Hello')
-        function *generatorStart(){
-            let nextNum = 300;
-            while(true){
-                yield(nextNum++);
-            }
+        //Here iterator
+
+        // var arr = ['Apple', 'Banana', 'Guava', 'Grapes'];
+        var arr = "Qutbuddin Khan";
+
+        //console.log(typeof arr[Symbol.iterator]) //function
+
+
+        var y = arr[Symbol.iterator]();
+        var result = y.next();
+        // console.log(y)
+        // y.next();
+        // console.log(y.next());
+        // console.log(y.next());
+        // console.log(y.next().value);
+        // console.log(y.next().done);
+
+        while(!result.done){
+            console.log(result.value);
+            result = y.next();
         }
 
-        let g = generatorStart();
-        for(value of g){
-            if(value > 310) break;
-            console.log(value)
-        }
+        // console.log('Hello')
+        // function *generatorStart(){
+        //     let nextNum = 300;
+        //     while(true){
+        //         yield(nextNum++);
+        //     }
+        // }
+
+        // let g = generatorStart();
+        // for(value of g){
+        //     if(value > 310) break;
+        //     console.log(value)
+        // }
     </script>
 </body>
 </html>
