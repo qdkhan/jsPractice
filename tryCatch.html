@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        try{
+            var obj = '{"name":"Qutbuddin Khan", "mobile":"+91-9616279623", "url":"http://www.gmail.com"}'
+            var res = JSON.parse(obj)
+            console.log(res.name)
+            console.log(res.mobile)
+            // console.log(obj.name)         
+
+        }catch(e){
+
+            // console.log('Try Failed')
+            // console.log(e.name + ': ' + e.message)
+            console.log(e.stack);
+        } finally { console.log('Functionally Completed')}
+    </script>
+</body>
+</html>
