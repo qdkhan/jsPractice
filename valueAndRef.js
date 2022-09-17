@@ -32,4 +32,8 @@ var length = arr1.length == arr2.length && arr1.every((currElem)=> {
     }
 })
 
-console.log(length);
+// console.log(length);
+
+var arr3 = [10,15,16,17,12,13,14,18,10,15,16,17,12,13,14,18];
+var newArray = [...new Set(arr3)];
+console.log(newArray);
