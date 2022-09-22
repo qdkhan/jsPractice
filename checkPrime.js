@@ -1,13 +1,13 @@
-var prime = [];
-for(let i = 1; i < 20; i++) {
-    for(let j = 2; j < i; j++) {
-        if(i%j == 0){
-            prime = [...prime, i];
-        }
-    }
-}
+// var prime = [];
+// for(let i = 1; i < 20; i++) {
+//     for(let j = 2; j < i; j++) {
+//         if(i%j == 0){
+//             prime = [...prime, i];
+//         }
+//     }
+// }
 
-console.log( [...new Set(prime)]);
+// console.log( [...new Set(prime)]);
 // console.log([...new Set(nonPrime)]);
 
 // function getPrimes(max) {
@@ -24,3 +24,24 @@ console.log( [...new Set(prime)]);
 //     return primes;
 // }
 // console.log(getPrimes(10));
+
+var arr1 = [1,2,3,8]
+
+const findSum = (arr1)=> {
+    var sum = 10;
+    for(let value of arr1){
+        for(let val  of arr1){
+            if(val+value == sum){
+                // console.log(true)
+            }
+        }
+    }
+}
+findSum(arr1)
+
+var x =1 , y = 1;
+x
+++
+y
+console.log(x);
+console.log(y);
