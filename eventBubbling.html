@@ -21,17 +21,21 @@
     </div>
     <script>
 
-        parentDivFunction =()=>{
+        // parentDivFunction =()=>{
+        //     alert('Parent div');
+        // }
+
+        // childDivFunction =()=>{
+        //     alert('Child div')
+        //     // event.stopPropagation();
+        // }
+
+        document.querySelector('#parentDiv').addEventListener('click',(e)=>{
             alert('Parent div');
-        }
-
-        childDivFunction =()=>{
+        }, true);
+        document.querySelector('#childDiv').addEventListener('click',(e)=>{
             alert('Child div')
-            // event.stopPropagation();
-        }
-
-        document.querySelector('#parentDiv').addEventListener('click',parentDivFunction, false);
-        document.querySelector('#childDiv').addEventListener('click',childDivFunction, false);
+        }, true);
     </script>
 </body>
 </html>
