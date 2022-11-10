@@ -1,4 +1,12 @@
-const chalk = require('chalk');
 const validate = require('validator');
-var name = 'Xipetech Lucknow';
-console.log(chalk.blue(name) + ' World' + chalk.red('!'));
+console.log('Hello world!!1');
+
+console.log(validate.isEmail('qdkhan@yahoo.in'));
+
+(()=>{
+    var a = 'Qutbuddin Khan';
+    console.log(a);
+})();
+
+console.log(__dirname)
+console.log(__filename)
