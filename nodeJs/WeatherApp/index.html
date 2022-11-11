@@ -237,25 +237,26 @@ body > span {
         <div class="wave -two"></div>
         <div class="wave -three"></div>
 
-        <div id="weather con">
+        <div id="weathercon">
             <i class="fas fa-sun" style="color:#eccc68"></i>
         </div>
         <div class="info">
-            <h2 class="location"><i class="fas fa-street-view" style="color: #fff"></i>Blp, In</h2>
+            <h3 class="location"><i class="fas fa-street-view" style="color: #fff"></i>{%name%}, {%country%}</h3>
             <p id="date">WED | Nov 11 | 10:23 AM<p>
-            <h1 class="temp"> 26.49 .C</h1>
-            <h3 class="tempmin_max">Min 26.2 .C | Max 32.5 .C</h3>
+            <h1 class="temp"> {%temp%} &deg;C</h1>
+            <h3 class="tempmin_max">Min {%temp_min%} &deg;C | Max {%temp_max%} &deg;C</h3>
         </div>
     </div>
     
     <script type="text/javascript">
 
-        let weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+        let weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
         let now = new Date();
         let date = now.getDate();
         let day = weekday[now.getDay()];
+        console.log(day)
         let month = months[now.getMonth()];
 
         let hour = now.getHours();
