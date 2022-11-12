@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Daily Quotes</h3><hr/>
+    <p id="qoutes">Quotes Will be Here</p>
+    <p id="author">Author Name</p>
+    <button onclick="quotesApi()">New</button>
+    <script>
+        
+        const quotes = document.getElementById("qoutes")
+        const author = document.getElementById("author")
+        
+        const quotesApi = async () => {
+            const api = "https://type.fit/api/quotes"
+            try {
+                let data = await fetch(api);
+                realData = await data.json();
+
+                var index = Math.floor(Math.random() * 10);
+                quotes.innerText = realData[index].text;
+                author.innerText = realData[index].author;
+
+            } catch (error) {
+
+            }
+        }
+        quotesApi()
+    </script>
+</body>
+</html>
+

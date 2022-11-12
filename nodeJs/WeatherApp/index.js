@@ -15,7 +15,7 @@ const replaceVal = (homePage, orgVal) => {
 
 const server = http.createServer((req, res) => {
     if(req.url=="/"){
-        requests("https://api.openweathermap.org/data/2.5/weather?q=Balrampur&appid=13e2acafc2ba97405050dab0909e2396")
+        requests("https://api.openweathermap.org/data/2.5/weather?q=Lucknow&appid=13e2acafc2ba97405050dab0909e2396")
         .on('data', (chunk) => {
             const parseData = [JSON.parse(chunk)];
             // console.log(parseData[0].main.temp)
@@ -28,6 +28,8 @@ const server = http.createServer((req, res) => {
             console.log('end');
             res.end();
         });
+    } else {
+        res.end('File Not Found');
     }
 })
 
